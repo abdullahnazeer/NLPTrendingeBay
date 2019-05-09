@@ -23,8 +23,8 @@ router.get('/relateditems', function (req, res, next) {
     getRecommended(searchTerm, res);
 });
 
-router.get('/test',(req,res)=>{
-    console.log('GET Method Valid');
+router.post('/test',(req,res)=>{
+    console.log('POST Method Valid');
     console.log(`Requested URL ${req.url}`);
     res.end("PriceFinder RESTful API");
 });
