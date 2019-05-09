@@ -23,6 +23,12 @@ router.get('/relateditems', function (req, res, next) {
     getRecommended(searchTerm, res);
 });
 
+router.get('/test',(req,res)=>{
+    console.log('GET Method Valid');
+    console.log(`Requested URL ${req.url}`);
+    res.end("PriceFinder RESTful API");
+});
+
 function getRecommended(searchTerm, res) {
 
 
@@ -58,16 +64,13 @@ function getRecommended(searchTerm, res) {
             pArr.push(fPrice);
             itemCount++;
 
-
         }
-
 
         console.log("Total : " + total);
         console.log("items : " + itemCount);
         console.log("Average : " + total / itemCount);
 
         predictedPrice = total / itemCount;
-
 
         predictedJson = {
             total: total,

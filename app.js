@@ -39,9 +39,7 @@ function calculatePrice(searchTerm, res) {
 
     ebay.findItemsByKeywords(searchTerm).then((data) => {
         jsonRes = data;
-        // var item["@count"] = "";
 
-        // console.log(JSON.stringify(data));
         var itemCount = 0;
         for (var searchResult in jsonRes[0].searchResult[0].item) {
 
@@ -53,9 +51,7 @@ function calculatePrice(searchTerm, res) {
             pArr.push(fPrice);
             itemCount++;
 
-
         }
-
 
         console.log("Total : " + total);
         console.log("items : " + itemCount);
