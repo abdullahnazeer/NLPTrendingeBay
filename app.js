@@ -18,9 +18,8 @@ router.get('/:search', function (req, res, next) {
     calculatePrice(searchTerm, res);
 });
 
-router.post('/test',(req,res)=>{
-    console.log('POST Method Valid');
-    console.log(`Requested URL ${req.url}`);
+router.get('/test', function (req, res, next) {
+    console.log('requested url: ' + req.url);
     res.end("PriceFinder RESTful API");
 });
 
